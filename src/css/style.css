@@ -1,0 +1,7 @@
+body {
+    padding:0;
+    background: #f1f1f1;
+    font-family: "Apple Braille", Tahoma, sans-serif;
+    background-image: url('../assets/images/3.jpeg');
+    background-size: 300px auto;
+}
