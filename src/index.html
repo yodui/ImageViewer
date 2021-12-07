@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>ImageViewer</title>
 </head>
 <body>
 
-<img src="assets/images/1.jpeg" />
+<div class="galleryRow">
+    <div class="item"><img src="assets/images/1m.jpg" /></div>
+    <div class="item"><img src="assets/images/2m.jpg" /></div>
+    <div class="item"><img src="assets/images/3m.jpg" /></div>
+    <div class="item"><img src="assets/images/4m.png" /></div>
+</div>
+
+<script type="text/javascript" src="js/ImageViewer.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const viewer = new ImageViewer();
+        viewer.init();
+
+    })
+</script>
 
 </body>
 </html>
