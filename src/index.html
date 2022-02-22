@@ -6,21 +6,47 @@
 </head>
 <body>
 
-<div class="image">
-    <div class="item"><img src="assets/images/1m.jpg" /></div>
-    <div class="item"><img src="assets/images/2m.jpg" /></div>
-    <div class="item"><img src="assets/images/3m.jpg" /></div>
-    <div class="item"><img src="assets/images/4m.png" /></div>
-</div>
+<section class="pageGrid">
+    <div class="productPhoto">
+        <img src="assets/loader.svg" />
+        <div class="viewerGrid" id="viewerGridEntityId">
+            <div class="mainImage">
+                <div class="dst">
+                    <img src="assets/images/1.jpg" />
+                </div>
+                <div class="imageName">Image name</div>
+            </div>
+            <div class="thumbnails">
+                <a href="assets/images/1.jpg" data-medium="assets/images/1m.jpg" class="selected">
+                    <img src="assets/images/1s.jpg" alt="Name of image 1" />
+                </a>
+                <a href="assets/images/2.jpg" data-medium="assets/images/2m.jpg">
+                    <img src="assets/images/2s.jpg" />
+                </a>
+                <a href="assets/images/3.jpg" data-medium="assets/images/3m.jpg">
+                    <img src="assets/images/3s.jpg" alt="name of image 3" />
+                </a>
+                <a href="assets/images/4.jpg" data-medium="assets/images/4m.jpg">
+                    <img src="assets/images/4s.jpg" />
+                </a>
+                <a href="assets/images/5.jpg" data-medium="assets/images/5m.jpg">
+                    <img src="assets/images/5s.jpg" alt="test name of image 5" />
+                </a>
+                <a href="assets/images/6.jpg" data-medium="assets/images/6m.jpg">
+                    <img src="assets/images/6s.jpg" alt="name of image 6" />
+                </a>
+            </div>
+        </div>
 
-<script type="text/javascript" src="js/ImageViewer.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const viewer = new ImageViewer();
-        viewer.init();
+        <script type="text/javascript" src="js/ImageViewer.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+                const viewer = new ImageViewer('viewerGridEntityId');
+            })
+        </script>
 
-    })
-</script>
-
+    </div>
+    <div class="productInfo">Product info...</div>
+</section>
 </body>
 </html>

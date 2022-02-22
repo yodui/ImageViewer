@@ -38,11 +38,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`
         }),
-        new CopyPlugin({
+        /*new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/assets/images'), to: path.resolve(__dirname, 'app/assets/images') }
+                { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'app/assets') }
             ]
-        })
+        })*/
     ],
     module: {
         rules: [
@@ -56,7 +56,7 @@ module.exports = {
             },
             {
                 test: /\.(png|gif|jpe?g|svg)$/i,
-                type: 'asset/resource'
+                loader: "file-loader"
             }
         ]
     }

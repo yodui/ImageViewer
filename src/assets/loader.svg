@@ -1,0 +1,51 @@
+<svg viewBox="-5 -5 70 70" class="loader">
+
+    <defs>
+
+        <style>
+            :root {
+            --loader-arc-30: "M25,25L45,-9.64A40,30,0,0,0,25,-15Z";
+            --loader-arc-110: "M25,25L62.59,38.68A40,30,0,0,0,25,-15Z";
+            }
+            .cls-spinner-path, .cls-1 {
+            fill:none;
+            stroke-width:8px;
+            stroke:white;
+            }
+            .cls-spinner-path {
+            stroke-opacity:0.2;
+            }
+            .cls-2 {
+            fill:#fff;
+            stroke:none;
+            animation:spin;
+            animation-duration:2s;
+            animation-timing-function:ease-in-out;
+            animation-iteration-count:infinite;
+            transform-origin:25px 25px;
+            }
+            @keyframes spin {
+            0% {
+            transform: rotate(45deg);
+            d: path(var(--loader-arc-30))
+            }
+            50% {
+            d: path(var(--loader-arc-110))
+            }
+            100% {
+            transform: rotate(405deg);
+            d: path(var(--loader-arc-30))
+            }
+            }
+        </style>
+
+
+    </defs>
+    <mask id="mask">
+        <circle class="cls-1" cx="25" cy="25" r="25"/>
+    </mask>
+    <circle class="cls-spinner-path" cx="25" cy="25" r="25"/>
+
+    <path class="cls-2" mask="url(#mask)" d="M25,25L55,25,A30,30,0,0,0,25,-5Z">
+
+</svg>
