@@ -1,2 +1,4 @@
 import ImageViewer from "./imageViewer/ImageViewer";
-export { ImageViewer }
+import { testFunction } from "./imageViewer/functions";
+
+export { ImageViewer, testFunction }
