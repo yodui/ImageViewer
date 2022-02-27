@@ -1,4 +1,5 @@
 :root {
+
     --main-image-height: 220px;
 
     --thumb-image-height: 60px;
@@ -6,4 +7,6 @@
 
     --thumb-image-bottom-margin: 10px;
     --thumb-image-right-margin: 8px;
+
+    --padd: 20px;
 }
