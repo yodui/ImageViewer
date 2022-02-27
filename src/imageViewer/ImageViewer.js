@@ -185,7 +185,7 @@ export default class ImageViewer {
         img.addEventListener('click', () => this.handleClickByMainImage(index))
     }
 
-    closeFullSlider() {
+    closeViewbox() {
         this.#nodes.backdrop.classList.toggle('show', false);
         this.#nodes.viewbox.classList.toggle('show', false);
         this.removeLoader();
@@ -209,7 +209,7 @@ export default class ImageViewer {
             const touch = {'left':false,'right':false};
 
             closeBtn.classList.toggle('close', true);
-            closeBtn.addEventListener('click', this.closeFullSlider.bind(this));
+            closeBtn.addEventListener('click', this.closeViewbox.bind(this));
             viewbox.append(closeBtn);
 
             const nav = document.createElement('div');
@@ -280,7 +280,7 @@ export default class ImageViewer {
             }
             this.#nodes.backdrop = backdrop;
             // bind event
-            this.#nodes.backdrop.addEventListener('click', this.closeFullSlider.bind(this));
+            this.#nodes.backdrop.addEventListener('click', this.closeViewbox.bind(this));
         }
         // show backdrop
         this.#nodes.backdrop.classList.toggle('show', true);
