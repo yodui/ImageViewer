@@ -5,22 +5,8 @@ body {
     background-size: 300px auto;
 }
 
-/* Example page grid */
-.pageGrid {
-    padding:20px 12px;
-    display: grid;
-    grid-template-areas: "productPhoto productInfo";
-    grid-template-columns: minmax(300px, 1fr) 4fr;
-}
 
-.pageGrid .productPhoto {
-    grid-area: productPhoto;
-}
 
-.pageGrid .productInfo {
-    grid-area: productInfo;
-}
-/* end example page grid */
 
 /* Loader */
 .loader {
@@ -47,27 +33,33 @@ body {
     }
 }
 
-.viewerGrid {
-    padding: 0 12px;
+
+.imageGrid {
+    padding: 32px;
+    width: 640px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #f8f8f8;
+
     display: grid;
     grid-template-areas: "main" "strip";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
 }
 
-.viewerGrid .mainImage {
+.imageGrid .mainImage {
     grid-area: main;
     display: grid;
     grid-template-areas: "img" "name";
     grid-template-rows: var(--main-image-height) auto;
 }
 
-.viewerGrid .mainImage .dst {
+.imageGrid .mainImage .dst {
     text-align: center;
     position:relative;
 }
 
-.viewerGrid .mainImage .dst.loading .loader {
+.imageGrid .mainImage .dst.loading .loader {
     position: absolute;
     left:50%;
     top:50%;
@@ -76,17 +68,17 @@ body {
     height:24px;
 }
 
-.viewerGrid .mainImage .dst img {
+.imageGrid .mainImage .dst img {
     max-height: 100%;
 }
 
-.viewerGrid .mainImage .imageName {
+.imageGrid .mainImage .imageName {
     text-align: center;
     font-size: 0.9em;
     opacity: 0.7;
 }
 
-.viewerGrid .thumbnails {
+.imageGrid .thumbnails {
     grid-area: strip;
     padding: 20px 0;
     box-sizing: border-box;
@@ -96,7 +88,7 @@ body {
 }
 
 
-.viewerGrid .thumbnails a {
+.imageGrid .thumbnails a {
     margin:0 var(--thumb-image-right-margin) var(--thumb-image-bottom-margin) 0;
     padding:0;
     line-height: 0.5em;
@@ -106,19 +98,19 @@ body {
     display: inline-block;
 }
 
-.viewerGrid .thumbnails a.selected {
+.imageGrid .thumbnails a.selected {
     border-color:darkgoldenrod;
 }
 
-.viewerGrid .thumbnails a:hover, .viewerGrid .thumbnails a.selected:hover {
+.imageGrid .thumbnails a:hover, .imageGrid .thumbnails a.selected:hover {
     border-color:goldenrod;
 }
 
-.viewerGrid .thumbnails a.selected {
+.imageGrid .thumbnails a.selected {
     border-color: #a97f0e;
 }
 
-.viewerGrid .thumbnails a > img {
+.imageGrid .thumbnails a > img {
     height:var(--thumb-image-height);
     width:auto;
     border-radius: 4px;

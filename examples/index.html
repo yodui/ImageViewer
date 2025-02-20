@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageViewer</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/vars.css" />
+    <script type="module">
+        import ImageViewer from '/src/ImageViewer/ImageViewer.js';
+
+        const viewer = new ImageViewer('viewerGridEntityId');
+    </script>
+</head>
+<body>
+
+    <section class="imageGrid" id="viewerGridEntityId">
+
+        <div class="mainImage">
+            <div class="dst">
+                <img src="/assets/images/1.jpg" />
+            </div>
+            <div class="imageName">Image name</div>
+        </div>
+
+        <div class="thumbnails">
+            <a href="/assets/images/1.jpg" data-medium="/assets/images/1m.jpg" class="selected">
+                <img src="/assets/images/1s.jpg" alt="Name of image 1" />
+            </a>
+            <a href="/assets/images/2.jpg" data-medium="/assets/images/2m.jpg">
+                <img src="/assets/images/2s.jpg" />
+            </a>
+            <a href="/assets/images/3.jpg" data-medium="/assets/images/3m.jpg">
+                <img src="/assets/images/3s.jpg" alt="name of image 3" />
+            </a>
+            <a href="/assets/images/4.jpg" data-medium="/assets/images/4m.jpg">
+                <img src="/assets/images/4s.jpg" />
+            </a>
+            <a href="/assets/images/5.jpg" data-medium="/assets/images/5m.jpg">
+                <img src="/assets/images/5s.jpg" alt="test name of image 5" />
+            </a>
+            <a href="/assets/images/6.jpg" data-medium="/assets/images/6m.jpg">
+                <img src="/assets/images/6s.jpg" alt="name of image 6" />
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
